@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
+import Header from "@/components/layout/Header";
 
 const initialPosts = [
   {
@@ -26,7 +27,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <main className="p-8">
+    <>
+      <Header />
+      <main className="p-8">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-2xl font-bold">Home Page</h2>
         <button
@@ -46,7 +49,8 @@ const Home: React.FC = () => {
           <Card key={idx} title={post.title} content={post.content} />
         ))}
       </div>
-    </main>
+      </main>
+    </>
   );
 };
 

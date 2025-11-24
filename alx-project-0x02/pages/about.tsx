@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "@/components/layout/Header";
 import Button from "@/components/common/Button";
 
 const About: React.FC = () => {
   return (
-    <main className="p-8">
+    <>
+      <Header />
+      <main className="p-8">
       <h2 className="text-2xl font-bold mb-4">About Page</h2>
       <p>
         This is the About page for ALX Project 0x02. Here you can learn more
@@ -20,7 +23,8 @@ const About: React.FC = () => {
           Large Rounded-full
         </Button>
       </div>
-    </main>
+      </main>
+    </>
   );
 };
 
