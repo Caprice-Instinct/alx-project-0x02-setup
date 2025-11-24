@@ -30,25 +30,25 @@ const Home: React.FC = () => {
     <>
       <Header />
       <main className="p-8">
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-2xl font-bold">Home Page</h2>
-        <button
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-          onClick={() => setModalOpen(true)}
-        >
-          Add Post
-        </button>
-      </div>
-      <PostModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        onSubmit={handleAddPost}
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {posts.map((post, idx) => (
-          <Card key={idx} title={post.title} content={post.content} />
-        ))}
-      </div>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl font-bold">Home Page</h2>
+          <button
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            onClick={() => setModalOpen(true)}
+          >
+            Add Post
+          </button>
+        </div>
+        <PostModal
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+          onSubmit={handleAddPost}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {posts.map((post, idx) => (
+            <Card key={idx} title={post.title} content={post.content} />
+          ))}
+        </div>
       </main>
     </>
   );

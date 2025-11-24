@@ -1,3 +1,8 @@
+export interface PostProps {
+  title: string;
+  content: string;
+  userId: number;
+}
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "small" | "medium" | "large";
