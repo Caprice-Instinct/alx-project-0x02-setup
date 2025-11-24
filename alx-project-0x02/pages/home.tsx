@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
 
-
 const initialPosts = [
-  { title: "Introduction", content: "Welcome to the Home page of ALX Project 0x02!" },
-  { title: "Features", content: "This project uses Next.js, TypeScript, and Tailwind CSS." },
-  { title: "Get Started", content: "Explore the About page to learn more about this project." },
+  {
+    title: "Introduction",
+    content: "Welcome to the Home page of ALX Project 0x02!",
+  },
+  {
+    title: "Features",
+    content: "This project uses Next.js, TypeScript, and Tailwind CSS.",
+  },
+  {
+    title: "Get Started",
+    content: "Explore the About page to learn more about this project.",
+  },
 ];
 
 const Home: React.FC = () => {
@@ -14,7 +22,7 @@ const Home: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts);
 
   const handleAddPost = (data: { title: string; content: string }) => {
-    setPosts(prev => [data, ...prev]);
+    setPosts((prev) => [data, ...prev]);
   };
 
   return (

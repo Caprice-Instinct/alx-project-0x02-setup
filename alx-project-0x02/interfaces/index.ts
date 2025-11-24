@@ -1,3 +1,9 @@
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  size?: "small" | "medium" | "large";
+  shape?: "rounded-sm" | "rounded-md" | "rounded-full";
+  children: React.ReactNode;
+}
 // TypeScript interfaces for the project can be defined here
 
 export interface ExampleInterface {

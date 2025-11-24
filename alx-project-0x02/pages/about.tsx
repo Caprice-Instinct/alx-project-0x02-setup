@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@/components/common/Button";
 
 const About: React.FC = () => {
   return (
@@ -8,6 +9,17 @@ const About: React.FC = () => {
         This is the About page for ALX Project 0x02. Here you can learn more
         about this project.
       </p>
+      <div className="flex gap-4 mt-8">
+        <Button size="small" shape="rounded-sm">
+          Small Rounded-sm
+        </Button>
+        <Button size="medium" shape="rounded-md">
+          Medium Rounded-md
+        </Button>
+        <Button size="large" shape="rounded-full">
+          Large Rounded-full
+        </Button>
+      </div>
     </main>
   );
 };

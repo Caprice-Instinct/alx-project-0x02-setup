@@ -31,7 +31,7 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
               type="text"
               className="w-full border border-gray-300 rounded px-3 py-2"
               value={title}
-              onChange={e => setTitle(e.target.value)}
+              onChange={(e) => setTitle(e.target.value)}
               required
             />
           </div>
@@ -40,7 +40,7 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
             <textarea
               className="w-full border border-gray-300 rounded px-3 py-2"
               value={content}
-              onChange={e => setContent(e.target.value)}
+              onChange={(e) => setContent(e.target.value)}
               required
             />
           </div>
