@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
 import PostCard from "@/components/common/PostCard";
 
-
 const Posts: React.FC = () => {
-  const [posts, setPosts] = useState<Array<{ id: number; title: string; body: string; userId: number }>>([]);
+  const [posts, setPosts] = useState<
+    Array<{ id: number; title: string; body: string; userId: number }>
+  >([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -33,7 +34,12 @@ const Posts: React.FC = () => {
         {error && <p className="text-red-500">{error}</p>}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {posts.map((post) => (
-            <PostCard key={post.id} title={post.title} content={post.body} userId={post.userId} />
+            <PostCard
+              key={post.id}
+              title={post.title}
+              content={post.body}
+              userId={post.userId}
+            />
           ))}
         </div>
       </main>
